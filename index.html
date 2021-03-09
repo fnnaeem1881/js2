@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascritpt Solve</title>
+</head>
+<body style="padding: 0px 200px;">
+    <h1>Type a value in the Kilometers field to convert the value to Meters:</h1>
+
+<p>
+  <label>Kilometers</label>
+  <input id="inputKilometers" type="number" placeholder="Kilometers" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+</p>
+<p>Meters: <span id="outputMeters"></span></p>
+
+<script>
+function LengthConverter(valNum) {
+  document.getElementById("outputMeters").innerHTML=valNum*1000;
+}
+</script>
+
+
+
+<h1>Type a value in the Meters field to convert the value to Kilometers:</h1>
+
+<p>
+  <label>Meters</label>
+  <input id="inputMeters" type="number" placeholder="Meters" oninput="metaercon(this.value)" onchange="metaercon(this.value)">
+</p>
+<p>Kilometers: <span id="outputKilometers"></span></p>
+
+<script>
+function metaercon(mvalNum) {
+  document.getElementById("outputKilometers").innerHTML=mvalNum/1000;
+}
+</script>
+
+
+<h1>Calculation of cost</h1> 
+<h5>Per  Mobile Price = 12000 TK </h5>
+<h5>Per  Tab Price = 8000 TK </h5>
+<h5>Per  Laptop Price = 30000 TK </h5>
+
+<div >
+ Mobile:<input type="number" id="mobail" oninput="price(this.value)"   >  <br> <br>
+ Tab:<input type="number" id="tab" oninput="price(this.value)"   > <br> <br>
+ Laptop:<input type="number" id="laptop" oninput="price(this.value)"  >  <br>  <br>
+  </div> 
+<h2>Total Ammounnt: <span id="tottaltk"></span>&nbsp;Tk</h2>        
+
+
+<!-- summation of three producs cost javascript function -->
+
+<script>
+function price() {
+ var mobile=document.getElementById('mobail').value;
+ var tab= document.getElementById('tab').value;
+ var laptop= document.getElementById('laptop').value;
+ var mCost=mobile*12000;
+ var TCost= tab*8000;
+ var LCost= laptop*30000;
+ TotalCost=mCost+TCost+LCost;
+ document.getElementById('tottaltk').innerHTML = TotalCost;
+}
+</script>
+
+
+</body>
+</html>
